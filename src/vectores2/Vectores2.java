@@ -21,6 +21,7 @@ public class Vectores2 {
         } else {
             System.out.println("SON DISTINTOS");
         }
+
         // INVERTIR UN VECTOR 
         System.out.println("+++++++++++  INVERTIR UN VECTOR +++++++++++ ");
         int[] vector3 = new int[5];
@@ -32,6 +33,45 @@ public class Vectores2 {
         vector3 = Vectores2.invertirVector(vector3);
         System.out.println("VECTOR INVERTIDO");
         mostrar(vector3);
+
+        // ORDENAR UN VECTOR 
+        System.out.println("+++++++++++  ORDENAR UN VECTOR  +++++++++++ ");
+        int[] a = new int[5];
+        a = ordenarVector(cargarVector(a));
+        mostrar(a);
+
+        // BUSCAR EN UN VECTOR 
+        System.out.println("+++++++++++ BUSCAR EN UN VECTOR  +++++++++++ ");
+        int[] vector5 = new int[5];
+        vector5 = cargarVector(vector5);
+        Scanner leer = new Scanner(System.in);
+        System.out.println("QUE ELEMENTO DECEAS BUSCAR");
+        int buscar = leer.nextInt();
+        String resp = buscarElemento(vector5, buscar);
+        System.out.println(resp);
+    }
+
+    public static String buscarElemento(int[] vector5, int buscar) {
+        for (int i = 0; i <= vector5.length - 1; i++) {
+            if (vector5[i] == buscar) {
+                return "EL ELEMENTO EXISTE";
+            }
+        }
+        return "NO SE ENCONTRO EL ELEMENTO";
+    }
+
+    public static int[] ordenarVector(int[] a) {
+        int aux = 0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 1; j < (a.length - i); j++) {
+                if (a[j - 1] > a[j]) {
+                    aux = a[j - 1];
+                    a[j - 1] = a[j];
+                    a[j] = aux;
+                }
+            }
+        }
+        return a;
     }
 
     public static int[] invertirVector(int[] x) {
