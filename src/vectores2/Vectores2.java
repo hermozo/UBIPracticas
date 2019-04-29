@@ -6,10 +6,59 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Vectores2 {
 
+    public static int[] sumar(int[] a, int[] b) {
+        int[] resp = new int[a.length];
+        for (int i = 0; i < a.length; i++) {
+            resp[i] = a[i] + b[i];
+        }
+        return resp;
+    }
+
+    public static int[] seriefibo(int max) {
+        int xx = -1;
+        int xxx = 1;
+        int[] fibo = new int[max];
+        for (int i = 0; i < max; i++) {
+            int y = (xxx + xx);
+            xx = xxx;
+            xxx = y;
+            fibo[i] = y;
+        }
+        return fibo;
+    }
+
+    public static int mayornum(int[] mayor) {
+        int ix = mayor[0];
+        for (int i = 0; i < mayor.length; i++) {
+            if (mayor[i] > ix) {
+                ix = mayor[i];
+            }
+        }
+        return ix;
+    }
+
     public static void main(String[] args) {
+        /*System.out.println(" +++++++++++ SUMAR DOS VECTORES +++++++++++ ");
+        int[] a1 = new int[3];
+        int[] b1 = new int[3];
+        System.out.println(" CARGAR VECTOR 1 ");
+        a1 = cargarVector(a1);
+        System.out.println(" CARGAR VECTOR 2 ");
+        b1 = cargarVector(b1);
+        int[] resp = sumar(a1, b1);
+        mostrar(resp);
+
+        System.out.println(" +++++++++++SERIE DE FIBONASI+++++++++++ ");
+        int[] fx = seriefibo(10);
+        mostrar(fx);
+        System.out.println(" +++++++++++Mayor de un numero+++++++++++ ");
+        int[] mayor = new int[5];
+        mayor = cargarVector(mayor);
+        int mayorx = mayornum(mayor);
+        System.out.println(" El mayor es " + mayorx);*/
 
         // VERIFICAR SI DOS VECTORES SONS IGUALES 
-        System.out.println(" +++++++++++ VERIFICAR SI DOS VECTORES SONS IGUALES +++++++++++ ");
+       /* System.out.println(" +++++++++++ VERIFICAR SI DOS VECTORES SONS IGUALES +++++++++++ ");
         int[] vector1 = new int[3];
         int[] vector2 = new int[3];
         System.out.println("elementos de vector 1 : ");
@@ -20,9 +69,9 @@ public class Vectores2 {
             System.out.println("SON IGUALES");
         } else {
             System.out.println("SON DISTINTOS");
-        }
+        }*/
 
-        // INVERTIR UN VECTOR 
+       /* // INVERTIR UN VECTOR 
         System.out.println("+++++++++++  INVERTIR UN VECTOR +++++++++++ ");
         int[] vector3 = new int[5];
         System.out.println("CARGAR VECTOR ");
@@ -32,13 +81,13 @@ public class Vectores2 {
         System.out.println("");
         vector3 = Vectores2.invertirVector(vector3);
         System.out.println("VECTOR INVERTIDO");
-        mostrar(vector3);
+        mostrar(vector3);*/
 
         // ORDENAR UN VECTOR 
-        System.out.println("+++++++++++  ORDENAR UN VECTOR  +++++++++++ ");
+       /* System.out.println("+++++++++++  ORDENAR UN VECTOR  +++++++++++ ");
         int[] a = new int[5];
         a = ordenarVector(cargarVector(a));
-        mostrar(a);
+        mostrar(a);*/
 
         // BUSCAR EN UN VECTOR 
         System.out.println("+++++++++++ BUSCAR EN UN VECTOR  +++++++++++ ");
