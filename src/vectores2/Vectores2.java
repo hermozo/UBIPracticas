@@ -38,7 +38,7 @@ public class Vectores2 {
     }
 
     public static void main(String[] args) {
-        /*System.out.println(" +++++++++++ SUMAR DOS VECTORES +++++++++++ ");
+        System.out.println(" +++++++++++ SUMAR DOS VECTORES +++++++++++ ");
         int[] a1 = new int[3];
         int[] b1 = new int[3];
         System.out.println(" CARGAR VECTOR 1 ");
@@ -55,10 +55,10 @@ public class Vectores2 {
         int[] mayor = new int[5];
         mayor = cargarVector(mayor);
         int mayorx = mayornum(mayor);
-        System.out.println(" El mayor es " + mayorx);*/
+        System.out.println(" El mayor es " + mayorx);
 
         // VERIFICAR SI DOS VECTORES SONS IGUALES 
-       /* System.out.println(" +++++++++++ VERIFICAR SI DOS VECTORES SONS IGUALES +++++++++++ ");
+        System.out.println(" +++++++++++ VERIFICAR SI DOS VECTORES SONS IGUALES +++++++++++ ");
         int[] vector1 = new int[3];
         int[] vector2 = new int[3];
         System.out.println("elementos de vector 1 : ");
@@ -69,9 +69,9 @@ public class Vectores2 {
             System.out.println("SON IGUALES");
         } else {
             System.out.println("SON DISTINTOS");
-        }*/
+        }
 
-       /* // INVERTIR UN VECTOR 
+        // INVERTIR UN VECTOR 
         System.out.println("+++++++++++  INVERTIR UN VECTOR +++++++++++ ");
         int[] vector3 = new int[5];
         System.out.println("CARGAR VECTOR ");
@@ -81,13 +81,13 @@ public class Vectores2 {
         System.out.println("");
         vector3 = Vectores2.invertirVector(vector3);
         System.out.println("VECTOR INVERTIDO");
-        mostrar(vector3);*/
+        mostrar(vector3);
 
         // ORDENAR UN VECTOR 
-       /* System.out.println("+++++++++++  ORDENAR UN VECTOR  +++++++++++ ");
+        System.out.println("+++++++++++  ORDENAR UN VECTOR  +++++++++++ ");
         int[] a = new int[5];
         a = ordenarVector(cargarVector(a));
-        mostrar(a);*/
+        mostrar(a);
 
         // BUSCAR EN UN VECTOR 
         System.out.println("+++++++++++ BUSCAR EN UN VECTOR  +++++++++++ ");
@@ -96,8 +96,8 @@ public class Vectores2 {
         Scanner leer = new Scanner(System.in);
         System.out.println("QUE ELEMENTO DECEAS BUSCAR");
         int buscar = leer.nextInt();
-        String resp = buscarElemento(vector5, buscar);
-        System.out.println(resp);
+        String resps = buscarElemento(vector5, buscar);
+        System.out.println(resps);
     }
 
     public static String buscarElemento(int[] vector5, int buscar) {
