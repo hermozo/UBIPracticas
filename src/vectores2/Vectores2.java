@@ -6,39 +6,51 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Vectores2 {
 
-    public static int[] sumar(int[] a, int[] b) {
-        int[] resp = new int[a.length];
-        for (int i = 0; i < a.length; i++) {
-            resp[i] = a[i] + b[i];
+    public static int[] generarVector(int[] vector) {
+        int c = 5;
+        for (int i = 0; i <= (vector.length - 1); i++) {
+            vector[i] = c;
+            c = c + 5;
         }
-        return resp;
+        return vector;
     }
 
-    public static int[] seriefibo(int max) {
-        int xx = -1;
-        int xxx = 1;
-        int[] fibo = new int[max];
-        for (int i = 0; i < max; i++) {
-            int y = (xxx + xx);
-            xx = xxx;
-            xxx = y;
-            fibo[i] = y;
+    public static void muestramyor(int[] vect2) {
+        int t = 0, c = 0;
+        for (int i = 0; i < vect2.length; i++) {
+            t = t + vect2[i];
+            c++;
         }
-        return fibo;
-    }
-
-    public static int mayornum(int[] mayor) {
-        int ix = mayor[0];
-        for (int i = 0; i < mayor.length; i++) {
-            if (mayor[i] > ix) {
-                ix = mayor[i];
+        double r = t / c;
+        for (int i = 0; i < vect2.length; i++) {
+            if (vect2[i] > r) {
+                System.out.println(vect2[i] + " - ");
             }
         }
-        return ix;
+
     }
 
     public static void main(String[] args) {
-        System.out.println(" +++++++++++ SUMAR DOS VECTORES +++++++++++ ");
+
+        /*System.out.println(" +++++++++++ GENERAR MULTIPLOS DE 5 +++++++++++ ");
+        int[] vect1 = new int[5];
+        vect1 = generarVector(vect1);
+        mostrar(vect1);
+        System.out.println();
+        System.out.println(" +++++++++++ HALLAR EL PROMEDIO DE UN VECTOR Y  CONTAR CUANTOS ELEMENTOS SON MAYOR QUE EL PRIMERO +++++++++++ ");
+        int[] vect2 = new int[5];
+        vect2 = cargarVector(vect2);
+        muestramyor(vect2);*/
+        System.out.println();
+        System.out.println(" +++++++++++ HALLAR EL MAYOR Y LA POSION DONDE SE ENCUENTRA +++++++++++ ");
+        
+        
+        System.out.println();
+        System.out.println(" +++++++++++ HALLAR LA X Y LA POSICION DONDE SE ENCUENTRA +++++++++++ ");
+        System.out.println();
+        System.out.println(" +++++++++++ ORDENAR DESENDENETEMENTE +++++++++++ ");
+
+        /* System.out.println(" +++++++++++ SUMAR DOS VECTORES +++++++++++ ");
         int[] a1 = new int[3];
         int[] b1 = new int[3];
         System.out.println(" CARGAR VECTOR 1 ");
@@ -51,6 +63,7 @@ public class Vectores2 {
         System.out.println(" +++++++++++SERIE DE FIBONASI+++++++++++ ");
         int[] fx = seriefibo(10);
         mostrar(fx);
+		
         System.out.println(" +++++++++++Mayor de un numero+++++++++++ ");
         int[] mayor = new int[5];
         mayor = cargarVector(mayor);
@@ -97,7 +110,38 @@ public class Vectores2 {
         System.out.println("QUE ELEMENTO DECEAS BUSCAR");
         int buscar = leer.nextInt();
         String resps = buscarElemento(vector5, buscar);
-        System.out.println(resps);
+        System.out.println(resps);*/
+    }
+
+    public static int[] sumar(int[] a, int[] b) {
+        int[] resp = new int[a.length];
+        for (int i = 0; i < a.length; i++) {
+            resp[i] = a[i] + b[i];
+        }
+        return resp;
+    }
+
+    public static int[] seriefibo(int max) {
+        int xx = -1;
+        int xxx = 1;
+        int[] fibo = new int[max];
+        for (int i = 0; i < max; i++) {
+            int y = (xxx + xx);
+            xx = xxx;
+            xxx = y;
+            fibo[i] = y;
+        }
+        return fibo;
+    }
+
+    public static int mayornum(int[] mayor) {
+        int ix = mayor[0];
+        for (int i = 0; i < mayor.length; i++) {
+            if (mayor[i] > ix) {
+                ix = mayor[i];
+            }
+        }
+        return ix;
     }
 
     public static String buscarElemento(int[] vector5, int buscar) {
