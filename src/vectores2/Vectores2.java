@@ -1,12 +1,11 @@
 package vectores2;
 
 import static java.lang.System.in;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Vectores2 {
-
-
 
     public static void main(String[] args) {
 
@@ -21,14 +20,26 @@ public class Vectores2 {
         muestramyor(vect2);
         System.out.println();
         System.out.println(" +++++++++++ HALLAR EL MAYOR Y LA POSION DONDE SE ENCUENTRA +++++++++++ ");
-        
-        
+        int[] vex = new int[5];
+        vex = cargarVector(vex);
+        buscamayor(vex);
         System.out.println();
         System.out.println(" +++++++++++ HALLAR LA X Y LA POSICION DONDE SE ENCUENTRA +++++++++++ ");
+        int[] vexx = new int[5];
+        vexx = cargarVector(vexx);
+        Scanner leerx = new Scanner(System.in);
+        System.out.println("QUE ELEMENTO DECEAS BUSCAR");
+        int buscarx = leerx.nextInt();
+        String resps = buscarElemento(vexx, buscarx);
+        System.out.println(resps);
         System.out.println();
         System.out.println(" +++++++++++ ORDENAR DESENDENETEMENTE +++++++++++ ");
-
-         System.out.println(" +++++++++++ SUMAR DOS VECTORES +++++++++++ ");
+        int[] vedes = new int[5];
+        vedes = cargarVector(vedes);
+        ordSelDesc(vedes);
+        /*   
+        System.out.println();
+        System.out.println(" +++++++++++ SUMAR DOS VECTORES +++++++++++ ");
         int[] a1 = new int[3];
         int[] b1 = new int[3];
         System.out.println(" CARGAR VECTOR 1 ");
@@ -41,7 +52,7 @@ public class Vectores2 {
         System.out.println(" +++++++++++SERIE DE FIBONASI+++++++++++ ");
         int[] fx = seriefibo(10);
         mostrar(fx);
-		
+
         System.out.println(" +++++++++++Mayor de un numero+++++++++++ ");
         int[] mayor = new int[5];
         mayor = cargarVector(mayor);
@@ -88,11 +99,53 @@ public class Vectores2 {
         System.out.println("QUE ELEMENTO DECEAS BUSCAR");
         int buscar = leer.nextInt();
         String resps = buscarElemento(vector5, buscar);
-        System.out.println(resps);
+        System.out.println(resps); */
     }
-	
-	
-	    public static int[] generarVector(int[] vector) {
+
+    public static void buscamayor(int[] vex) {
+        int may = vex[0];
+        int pos = 0;
+        for (int i = 0; i < vex.length; i++) {
+            if (vex[i] > may) {
+                may = vex[i];
+                pos = i;
+            }
+        }
+
+        System.out.println("El Mayor es " + may + " Y es esta posicion " + pos);
+    }
+
+    public static void buscax(int[] vex, int x) {
+        int pos = 0;
+        boolean xx = true;
+        for (int i = 0; i < vex.length; i++) {
+            if (vex[i] == x) {
+                pos = i;
+                xx = false;
+            }
+        }
+        if (xx == false) {
+            System.out.println("Si esiste la X esta l aposicion " + pos);
+        } else {
+            System.out.println("NO esiste la X");
+        }
+
+    }
+
+    public static void ordSelDesc(int[] a) {
+        for (int x = 0; x < a.length; x++) {
+            for (int i = 0; i < a.length - x - 1; i++) {
+                if (a[i] < a[i + 1]) {
+                    int tmp = a[i + 1];
+                    a[i + 1] = a[i];
+                    a[i] = tmp;
+                }
+            }
+        }
+        mostrar(a);
+    }
+
+    public static int[] generarVector(int[] vector) {
         int c = 5;
         for (int i = 0; i <= (vector.length - 1); i++) {
             vector[i] = c;
@@ -115,7 +168,7 @@ public class Vectores2 {
         }
 
     }
-	
+
     public static int[] sumar(int[] a, int[] b) {
         int[] resp = new int[a.length];
         for (int i = 0; i < a.length; i++) {
@@ -150,7 +203,7 @@ public class Vectores2 {
     public static String buscarElemento(int[] vector5, int buscar) {
         for (int i = 0; i <= vector5.length - 1; i++) {
             if (vector5[i] == buscar) {
-                return "EL ELEMENTO EXISTE";
+                return "EL ELEMENTO EXISTE seat en " + i;
             }
         }
         return "NO SE ENCONTRO EL ELEMENTO";
