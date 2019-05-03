@@ -6,29 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Vectores2 {
 
-    public static int[] generarVector(int[] vector) {
-        int c = 5;
-        for (int i = 0; i <= (vector.length - 1); i++) {
-            vector[i] = c;
-            c = c + 5;
-        }
-        return vector;
-    }
 
-    public static void muestramyor(int[] vect2) {
-        int t = 0, c = 0;
-        for (int i = 0; i < vect2.length; i++) {
-            t = t + vect2[i];
-            c++;
-        }
-        double r = t / c;
-        for (int i = 0; i < vect2.length; i++) {
-            if (vect2[i] > r) {
-                System.out.println(vect2[i] + " - ");
-            }
-        }
-
-    }
 
     public static void main(String[] args) {
 
@@ -112,7 +90,32 @@ public class Vectores2 {
         String resps = buscarElemento(vector5, buscar);
         System.out.println(resps);
     }
+	
+	
+	    public static int[] generarVector(int[] vector) {
+        int c = 5;
+        for (int i = 0; i <= (vector.length - 1); i++) {
+            vector[i] = c;
+            c = c + 5;
+        }
+        return vector;
+    }
 
+    public static void muestramyor(int[] vect2) {
+        int t = 0, c = 0;
+        for (int i = 0; i < vect2.length; i++) {
+            t = t + vect2[i];
+            c++;
+        }
+        double r = t / c;
+        for (int i = 0; i < vect2.length; i++) {
+            if (vect2[i] > r) {
+                System.out.println(vect2[i] + " - ");
+            }
+        }
+
+    }
+	
     public static int[] sumar(int[] a, int[] b) {
         int[] resp = new int[a.length];
         for (int i = 0; i < a.length; i++) {
