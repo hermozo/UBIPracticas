@@ -32,7 +32,7 @@ public class Vectores2 {
 
     public static void main(String[] args) {
 
-        /*System.out.println(" +++++++++++ GENERAR MULTIPLOS DE 5 +++++++++++ ");
+        System.out.println(" +++++++++++ GENERAR MULTIPLOS DE 5 +++++++++++ ");
         int[] vect1 = new int[5];
         vect1 = generarVector(vect1);
         mostrar(vect1);
@@ -40,7 +40,7 @@ public class Vectores2 {
         System.out.println(" +++++++++++ HALLAR EL PROMEDIO DE UN VECTOR Y  CONTAR CUANTOS ELEMENTOS SON MAYOR QUE EL PRIMERO +++++++++++ ");
         int[] vect2 = new int[5];
         vect2 = cargarVector(vect2);
-        muestramyor(vect2);*/
+        muestramyor(vect2);
         System.out.println();
         System.out.println(" +++++++++++ HALLAR EL MAYOR Y LA POSION DONDE SE ENCUENTRA +++++++++++ ");
         
@@ -50,7 +50,7 @@ public class Vectores2 {
         System.out.println();
         System.out.println(" +++++++++++ ORDENAR DESENDENETEMENTE +++++++++++ ");
 
-        /* System.out.println(" +++++++++++ SUMAR DOS VECTORES +++++++++++ ");
+         System.out.println(" +++++++++++ SUMAR DOS VECTORES +++++++++++ ");
         int[] a1 = new int[3];
         int[] b1 = new int[3];
         System.out.println(" CARGAR VECTOR 1 ");
@@ -110,7 +110,7 @@ public class Vectores2 {
         System.out.println("QUE ELEMENTO DECEAS BUSCAR");
         int buscar = leer.nextInt();
         String resps = buscarElemento(vector5, buscar);
-        System.out.println(resps);*/
+        System.out.println(resps);
     }
 
     public static int[] sumar(int[] a, int[] b) {
